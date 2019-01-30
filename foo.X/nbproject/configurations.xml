@@ -41,7 +41,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../../Documents/meanmachine/Lab0/lcd.a</linkerLibFileItem>
+            <linkerLibFileItem>lcd.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>

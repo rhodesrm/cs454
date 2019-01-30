@@ -13,6 +13,7 @@
 //do not change the order of the following 3 definitions
 #define FCY 12800000UL 
 #include <stdio.h>
+#include <math.h>
 #include <libpic30.h>
 
 #include "lcd.h"
@@ -38,9 +39,19 @@ int main(){
 	lcd_clear();
 	lcd_locate(1,1);
 	lcd_printf("Hello World!");	
-    drawCircle(64,32,20,1);
+    drawCircle(64,32,30,1);
 	/* Do nothing */
+    int waiter = 0;
+    int rad = 2;
 	while(1){
+        if(waiter > 1000) {
+            waiter = 0;
+            lcd_clear();
+            int final_rad = 25+10*sin(rad/100);
+            drawCircle(64,32,final_rad,1);
+            rad++;
+        }
+        waiter++;
 		
 	}
     
