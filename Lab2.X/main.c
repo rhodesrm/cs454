@@ -155,7 +155,7 @@ int main(){
         uint16_t diff = TMR3 - old;
         
         if(count == 20000) {
-            clearLCD();
+            lcd_locate(1,1);
             lcd_printf("%u cycles\r\n",diff);
             __delay_ms(25);
             lcd_printf("%0.4f ms\r\n",diff/(12.8*1e3));
