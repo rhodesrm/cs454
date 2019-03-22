@@ -180,26 +180,14 @@ int main(){
         if(current_vote != previous_vote) {
             if(current_vote) {
                 inc++;
-                if(inc == 1) {
+                if(inc == 1)
                     max_x = sample(0x004);
-                    lcd_locate(1,1);
-                    lcd_printf("Joystick max x= %4u", max_x);   
-                }
-                else if(inc == 2) {
+                else if(inc == 2)
                     min_x = sample(0x004);
-                    lcd_locate(1,2);
-                    lcd_printf("Joystick min x= %4u", min_x);    
-                }
-                else if(inc == 3) {
+                else if(inc == 3)
                     max_y = sample(0x005);
-                    lcd_locate(1,3);
-                    lcd_printf("Joystick max y= %4u", max_y); 
-                }
-                else if(inc == 4) {
-                    min_y = sample(0x005);
-                    lcd_locate(1,4);
-                    lcd_printf("Joystick min y= %4u", min_y); 
-                }  
+                else if(inc == 4)
+                    min_y = sample(0x005);    
             }
             previous_vote = current_vote;
         }
