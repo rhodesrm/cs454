@@ -165,7 +165,7 @@ int main(){
     init_joystick_adc(AD2PCFGLbits.PCFG5);
     setup_timer1();
    
-    int length = 7;
+    int length = 15;
     int past_clicks[length];
     int i;
     for(i = 0; i < length; i++) {
